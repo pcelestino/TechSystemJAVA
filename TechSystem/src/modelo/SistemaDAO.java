@@ -1,7 +1,7 @@
 package modelo;
 
 import controle.ConectaBanco;
-import controle.validacao.SenhaInvalidaException;
+import controle.excecao.SenhaInvalidaException;
 import java.sql.Date;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;

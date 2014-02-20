@@ -1,9 +1,9 @@
 package controle.evento;
 
 import static controle.ControleLoginSistema.telaPrincipal;
-import controle.validacao.NomeVendaInvalidoException;
+import controle.excecao.NomeVendaInvalidoException;
 import controle.validacao.Validador;
-import controle.validacao.ValorInvalidoException;
+import controle.excecao.ValorInvalidoException;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JOptionPane;

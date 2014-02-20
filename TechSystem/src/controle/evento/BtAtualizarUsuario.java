@@ -2,10 +2,10 @@ package controle.evento;
 
 import com.alee.laf.text.WebPasswordField;
 import static controle.ControleLoginSistema.telaPrincipal;
-import controle.validacao.CpfInvalidoException;
-import controle.validacao.DataInvalidaException;
-import controle.validacao.NomeInvalidoException;
-import controle.validacao.SenhaInvalidaException;
+import controle.excecao.CpfInvalidoException;
+import controle.excecao.DataInvalidaException;
+import controle.excecao.NomeInvalidoException;
+import controle.excecao.SenhaInvalidaException;
 import controle.validacao.Validador;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;

@@ -1,4 +1,4 @@
-package controle.validacao;
+package controle.excecao;
 
 /**
  * Exceção para o nome da venda inválido

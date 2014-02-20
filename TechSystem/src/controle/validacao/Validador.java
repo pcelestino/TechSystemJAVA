@@ -1,5 +1,11 @@
 package controle.validacao;
 
+import controle.excecao.NomeInvalidoException;
+import controle.excecao.SenhaInvalidaException;
+import controle.excecao.ValorInvalidoException;
+import controle.excecao.NomeVendaInvalidoException;
+import controle.excecao.DataInvalidaException;
+import controle.excecao.CpfInvalidoException;
 import controle.ConectaBanco;
 
 import java.sql.SQLException;
