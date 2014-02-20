@@ -5,7 +5,10 @@ import controle.excecao.SenhaInvalidaException;
 import java.sql.Date;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
+import java.text.DecimalFormat;
+import java.text.DecimalFormatSymbols;
 import java.util.ArrayList;
+import java.util.Locale;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JOptionPane;
@@ -25,6 +28,18 @@ public class SistemaDAO {
     private ConectaBanco bancoDados;
     private PreparedStatement pst;
     private Date dtValue;
+    /** 
+    * Locale Brasileiro 
+    */  
+    private final Locale BRAZIL = new Locale("pt","BR");  
+    /** 
+    * Símbolos especificos do Real Brasileiro 
+    */  
+    private final DecimalFormatSymbols REAL = new DecimalFormatSymbols(BRAZIL);  
+    /** 
+    * Mascara de dinheiro para Real Brasileiro 
+    */  
+    private final DecimalFormat DINHEIRO_REAL = new DecimalFormat("¤ ###,###,##0.00",REAL);
 
     /**
      * Cadastra um cliente
@@ -480,12 +495,12 @@ public class SistemaDAO {
                     + "salario_funcionario FROM funcionarios");
 
             while (bancoDados.getResultado().next()) {
-
+                
                 // Ler o registro do banco de dados
                 nome = bancoDados.getResultado().getString("nome_funcionario");
                 cpf = bancoDados.getResultado().getString("cpf_funcionario");
                 data = bancoDados.getResultado().getString("nascimento_funcionario");
-                salario = bancoDados.getResultado().getString("salario_funcionario");
+                salario = DINHEIRO_REAL.format(bancoDados.getResultado().getDouble("salario_funcionario"));
 
                 if (data != null) {
                     // Transforma a data no formato SQL para o formato br

@@ -38,7 +38,9 @@ public class MouseEditarFuncionario implements MouseListener {
         painelEdicaoFuncionario.getTfNome().setText(obj.get(0).toString());
         painelEdicaoFuncionario.getFtfCpf().setText(obj.get(1).toString());
         painelEdicaoFuncionario.getFtfDataNascimento().setText(obj.get(2).toString());
-        painelEdicaoFuncionario.getFtfSalario().setText(obj.get(3).toString());
+        
+        // Remove todos os caracteres não numéricos menos a ',' da String e insere no FtfSalario
+        painelEdicaoFuncionario.getFtfSalario().setText(obj.get(3).toString().replaceAll("[^\\d,]", ""));
     }
 
     @Override
