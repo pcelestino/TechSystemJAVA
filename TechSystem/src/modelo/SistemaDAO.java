@@ -625,7 +625,7 @@ public class SistemaDAO {
                 cpfCliente = bancoDados.getResultado().getString("cpf_cliente");
                 cpfFuncionario = bancoDados.getResultado().getString("cpf_funcionario");
                 nomeVenda = bancoDados.getResultado().getString("nome_venda");
-                valorVenda = bancoDados.getResultado().getString("valor_venda");
+                valorVenda = DINHEIRO_REAL.format(bancoDados.getResultado().getDouble("valor_venda"));
 
                 // Adiciona "." e "-" na string cpf
                 cpfCliente = cpfCliente.substring(0, 3) + "."

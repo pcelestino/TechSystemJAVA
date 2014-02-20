@@ -106,9 +106,9 @@ public class PainelSistema extends WebPanel {
 
         // Seleciona a coluna para modificar o tamanho
         TableColumn column = tbPessoas.getColumnModel().getColumn(0);
-        column.setPreferredWidth(20);
+        column.setPreferredWidth(10);
         column = tbPessoas.getColumnModel().getColumn(4);
-        column.setPreferredWidth(30);
+        column.setPreferredWidth(80);
 
         return tbPessoas;
     }
@@ -154,12 +154,6 @@ public class PainelSistema extends WebPanel {
     public WebTable atualizarTabelaVenda() {
 
         tbPessoas.setModel(sistemaDao.gerarTabelaVenda());
-
-        // Seleciona a coluna para modificar o tamanho
-        TableColumn column = tbPessoas.getColumnModel().getColumn(0);
-        column.setPreferredWidth(20);
-        column = tbPessoas.getColumnModel().getColumn(4);
-        column.setPreferredWidth(30);
 
         return tbPessoas;
     }

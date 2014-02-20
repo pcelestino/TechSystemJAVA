@@ -44,7 +44,9 @@ public class MouseEditarVenda implements MouseListener {
         painelEdicaoVenda.getCbCpfCliente().setSelectedItem(cpfCliente);
         painelEdicaoVenda.getCbCpfFuncionario().setSelectedItem(cpfFuncionario);
         painelEdicaoVenda.getTfNomeVenda().setText(obj.get(3).toString());
-        painelEdicaoVenda.getFtfValorVenda().setText(obj.get(4).toString());
+        
+        // Remove todos os caracteres não numéricos menos a ',' da String e insere no FtfSalario
+        painelEdicaoVenda.getFtfValorVenda().setText(obj.get(4).toString().replaceAll("[^\\d,]", ""));
     }
 
     @Override

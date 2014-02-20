@@ -7,9 +7,12 @@ import com.alee.laf.table.WebTable;
 import com.alee.laf.text.WebFormattedTextField;
 import com.alee.laf.text.WebTextField;
 import controle.evento.BtCadastrarVenda;
+import controle.evento.MouseCadastrarVendaCpfCliente;
+import controle.evento.MouseCadastrarVendaCpfFuncionario;
 import java.awt.Dimension;
 import java.awt.GridBagConstraints;
 import java.awt.Insets;
+import java.util.ArrayList;
 import javax.swing.border.TitledBorder;
 import visao.PainelSistema;
 
@@ -22,6 +25,8 @@ public class PainelCadastroVenda extends PainelSistema {
 
     private static final long serialVersionUID = 1L;
     private BtCadastrarVenda acaoBtCadastrarVenda;
+    private MouseCadastrarVendaCpfCliente acaoMouseCadastrarVendaCpfCliente;
+    private MouseCadastrarVendaCpfFuncionario acaoMouseCadastrarVendaCpfFuncionario;
     private GridBagConstraints restricoes;
     private TitledBorder bordaTitulo;
     private WebTabbedPane painelAbas;
@@ -30,6 +35,7 @@ public class PainelCadastroVenda extends PainelSistema {
     private WebTable tabelaVenda, tabelaCliente, tabelaFuncionario;
     private WebComboBox cbCpfCliente, cbCpfFuncionario;
     private WebScrollPane spVenda;
+    private ArrayList<Object> obj;
 
     /**
      * Carrega os componentes do painel
@@ -37,6 +43,8 @@ public class PainelCadastroVenda extends PainelSistema {
     public void carregarComponentes() {
 
         acaoBtCadastrarVenda = new BtCadastrarVenda();
+        acaoMouseCadastrarVendaCpfCliente = new MouseCadastrarVendaCpfCliente();
+        acaoMouseCadastrarVendaCpfFuncionario = new MouseCadastrarVendaCpfFuncionario();
         restricoes = new GridBagConstraints();
         cbCpfCliente = super.getCbCpfCliente();
         cbCpfFuncionario = super.getCbCpfFuncionario();
@@ -114,7 +122,9 @@ public class PainelCadastroVenda extends PainelSistema {
         painelAbas.addTab("Funcionarios", spVenda);
 
         this.add(painelAbas, restricoes);
-
+        
+        tabelaCliente.addMouseListener(acaoMouseCadastrarVendaCpfCliente);
+        tabelaFuncionario.addMouseListener(acaoMouseCadastrarVendaCpfFuncionario);
         super.setBtCadastrar("btCadastrarVenda", acaoBtCadastrarVenda);
 
         this.revalidate();
@@ -140,6 +150,8 @@ public class PainelCadastroVenda extends PainelSistema {
         painelAbas.addTab("Funcionarios", spVenda);
 
         this.add(painelAbas, restricoes);
+        tabelaCliente.addMouseListener(acaoMouseCadastrarVendaCpfCliente);
+        tabelaFuncionario.addMouseListener(acaoMouseCadastrarVendaCpfFuncionario);
         this.revalidate();
     }
 
@@ -218,6 +230,60 @@ public class PainelCadastroVenda extends PainelSistema {
     @Override
     public WebFormattedTextField getFtfValorVenda() {
         return ftfValorVenda;
+    }
+    
+    /**
+     * Retorna a linha selecionada na tabela de cliente
+     *
+     * @return a linha selecionada na tabela de cliente
+     */
+    public int getLinhaSelecionadaTbCliente() {
+        return this.getTabelaCliente().getSelectedRow();
+    }
+    
+    /**
+     * Retorna um Object contendo os valores de uma linha da tabela de cliente
+     *
+     * @param linhaSelecionada a linha selecionada na tabela de cliente
+     * @return um Object contendo os valores de uma linha da tabela de cliente
+     */
+    public ArrayList<Object> getValoresEmTbCliente(int linhaSelecionada) {
+
+        int qtColunas = this.getTabelaCliente().getColumnCount();
+        obj = new ArrayList<>();
+
+        for (int i = 0; i < qtColunas; i++) {
+            obj.add(this.getTabelaCliente().getValueAt(linhaSelecionada, i));
+        }
+
+        return obj;
+    }
+    
+    /**
+     * Retorna a linha selecionada na tabela de funcionário
+     *
+     * @return a linha selecionada na tabela de funcionário
+     */
+    public int getLinhaSelecionadaTbFuncionario() {
+        return this.getTabelaFuncionario().getSelectedRow();
+    }
+    
+    /**
+     * Retorna um Object contendo os valores de uma linha da tabela de funcionário
+     *
+     * @param linhaSelecionada a linha selecionada na tabela de cliente
+     * @return um Object contendo os valores de uma linha da tabela de funcionário
+     */
+    public ArrayList<Object> getValoresEmTbFuncionario(int linhaSelecionada) {
+
+        int qtColunas = this.getTabelaFuncionario().getColumnCount();
+        obj = new ArrayList<>();
+
+        for (int i = 0; i < qtColunas; i++) {
+            obj.add(this.getTabelaFuncionario().getValueAt(linhaSelecionada, i));
+        }
+
+        return obj;
     }
 
     /**
