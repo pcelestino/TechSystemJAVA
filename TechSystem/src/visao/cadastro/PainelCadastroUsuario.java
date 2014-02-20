@@ -13,6 +13,7 @@ import visao.PainelSistema;
 
 /**
  * Painel para cadastro de usuário
+ *
  * @author Pedro Celestino Silveira Junior
  */
 public class PainelCadastroUsuario extends PainelSistema {
@@ -94,7 +95,7 @@ public class PainelCadastroUsuario extends PainelSistema {
         this.add(spUsuario, restricoes);
 
         super.setBtCadastrar("btCadastrarUsuario", acaoBtCadastrarUsuario);
-        
+
         this.revalidate();
     }
 
@@ -107,8 +108,9 @@ public class PainelCadastroUsuario extends PainelSistema {
         this.repaint();
     }
 
-    /** 
+    /**
      * Retorna uma tabela de usuário
+     *
      * @return uma tabela de usuário
      */
     public WebTable getTabelaUsuario() {
@@ -117,6 +119,7 @@ public class PainelCadastroUsuario extends PainelSistema {
 
     /**
      * Retorna um TextField para o nome do usuário
+     *
      * @return um TextField para o nome do usuário
      */
     @Override
@@ -126,6 +129,7 @@ public class PainelCadastroUsuario extends PainelSistema {
 
     /**
      * Retorna um TextField para o cpf do usuário
+     *
      * @return um TextField para o cpf do usuário
      */
     @Override
@@ -135,6 +139,7 @@ public class PainelCadastroUsuario extends PainelSistema {
 
     /**
      * Retorna um TextField para a data de nascimento do usuário
+     *
      * @return um TextField para a data de nascimento do usuário
      */
     @Override
@@ -144,6 +149,7 @@ public class PainelCadastroUsuario extends PainelSistema {
 
     /**
      * Retorna um PasswordField para a senha do usuário
+     *
      * @return um PasswordField para a senha do usuário
      */
     @Override

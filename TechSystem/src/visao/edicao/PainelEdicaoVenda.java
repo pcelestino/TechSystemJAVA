@@ -19,6 +19,7 @@ import visao.PainelSistema;
 
 /**
  * Painel para edição de venda
+ *
  * @author Pedro Celestino Silveira Junior
  */
 public class PainelEdicaoVenda extends PainelSistema {
@@ -29,7 +30,7 @@ public class PainelEdicaoVenda extends PainelSistema {
     private MouseEditarVenda acaoMouseEditarVenda;
     private GridBagConstraints restricoes;
     private TitledBorder bordaTitulo;
-    
+
     private WebTabbedPane painelAbas;
     private WebTextField tfNomeVenda;
     private WebFormattedTextField ftfValorVenda;
@@ -48,7 +49,7 @@ public class PainelEdicaoVenda extends PainelSistema {
         acaoBtAtualizarVenda = new BtAtualizarVenda();
         acaoBtExcluirVenda = new BtExcluirVenda();
         acaoMouseEditarVenda = new MouseEditarVenda();
-        
+
         restricoes = new GridBagConstraints();
         tabelaVenda = super.gerarTabelaVenda();
         cbCpfCliente = super.getCbCpfCliente();
@@ -107,13 +108,13 @@ public class PainelEdicaoVenda extends PainelSistema {
         restricoes.gridy = 4;
         restricoes.gridx = 0;
         this.add(btExcluir, restricoes);
-        
+
         restricoes.gridy = 0;
         restricoes.gridx = 3;
         restricoes.weightx = 1;
         restricoes.gridheight = GridBagConstraints.REMAINDER;
         restricoes.fill = GridBagConstraints.BOTH;
-        
+
         painelAbas = new WebTabbedPane();
         painelAbas.setRound(3);
         painelAbas.setFontSize(14);
@@ -138,7 +139,7 @@ public class PainelEdicaoVenda extends PainelSistema {
         tabelaVenda.addMouseListener(acaoMouseEditarVenda);
         super.setBtAtualizar("btAtualizarVenda", acaoBtAtualizarVenda);
         super.setBtExcluir("btExcluirVenda", acaoBtExcluirVenda);
-        
+
         this.revalidate();
     }
 
@@ -178,6 +179,7 @@ public class PainelEdicaoVenda extends PainelSistema {
 
     /**
      * Retorna uma tabela de venda
+     *
      * @return uma tabela de venda
      */
     public WebTable getTabelaVenda() {
@@ -186,6 +188,7 @@ public class PainelEdicaoVenda extends PainelSistema {
 
     /**
      * Retorna um ComboBox para o cpf do cliente
+     *
      * @return um ComboBox para o cpf do cliente
      */
     @Override
@@ -195,6 +198,7 @@ public class PainelEdicaoVenda extends PainelSistema {
 
     /**
      * Retorna um ComboBox para o cpf do funcionário
+     *
      * @return um ComboBox para o cpf do funcionário
      */
     @Override
@@ -204,6 +208,7 @@ public class PainelEdicaoVenda extends PainelSistema {
 
     /**
      * Retorna um TextField para o nome da venda
+     *
      * @return um TextField para o nome da venda
      */
     @Override
@@ -213,6 +218,7 @@ public class PainelEdicaoVenda extends PainelSistema {
 
     /**
      * Retorna um TextField para o valor da venda
+     *
      * @return um TextField para o valor da venda
      */
     @Override
@@ -222,6 +228,7 @@ public class PainelEdicaoVenda extends PainelSistema {
 
     /**
      * Retorna um Button para atualização da venda
+     *
      * @return um Button para atualização da venda
      */
     @Override
@@ -232,6 +239,7 @@ public class PainelEdicaoVenda extends PainelSistema {
 
     /**
      * Retorna um Button para exclusão da venda
+     *
      * @return um Button para exclusão da venda
      */
     @Override
@@ -242,6 +250,7 @@ public class PainelEdicaoVenda extends PainelSistema {
 
     /**
      * Retorna a linha selecionada na tabela de venda
+     *
      * @return a linha selecionada na tabela de venda
      */
     public int getLinhaSelecionada() {
@@ -249,10 +258,13 @@ public class PainelEdicaoVenda extends PainelSistema {
     }
 
     /**
-     * Retorna uma String de uma tabela de acordo com os parametros linha e coluna
+     * Retorna uma String de uma tabela de acordo com os parametros linha e
+     * coluna
+     *
      * @param linha a linha da tabela de venda
      * @param coluna a coluna da tabela de venda
-     * @return uma String de uma tabela de acordo com os parametros linha e coluna
+     * @return uma String de uma tabela de acordo com os parametros linha e
+     * coluna
      */
     public String getTextoEm(int linha, int coluna) {
 
@@ -263,6 +275,7 @@ public class PainelEdicaoVenda extends PainelSistema {
 
     /**
      * Retorna um Object contendo os valores de uma linha da tabela de venda
+     *
      * @param linhaSelecionada a linha selecionada na tabela de venda
      * @return um Object contendo os valores de uma linha da tabela de venda
      */

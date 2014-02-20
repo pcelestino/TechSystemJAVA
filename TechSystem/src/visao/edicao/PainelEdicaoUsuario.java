@@ -19,17 +19,18 @@ import visao.PainelSistema;
 
 /**
  * Painel para edição de usuário
+ *
  * @author Pedro Celestino Silveira Junior
  */
 public class PainelEdicaoUsuario extends PainelSistema {
 
     private static final long serialVersionUID = 1L;
-    
+
     private BtAtualizarUsuario acaoBtAtualizarUsuario;
     private BtExcluirUsuario acaoBtExcluirUsuario;
     private MouseEditarUsuario acaoMouseEditarUsuario;
     private SenhaUsuario acaoSenhaUsuario;
-    
+
     private GridBagConstraints restricoes;
     private TitledBorder bordaTitulo;
     private WebCheckBox checkBoxSenha;
@@ -51,7 +52,7 @@ public class PainelEdicaoUsuario extends PainelSistema {
         acaoBtExcluirUsuario = new BtExcluirUsuario();
         acaoMouseEditarUsuario = new MouseEditarUsuario();
         acaoSenhaUsuario = new SenhaUsuario();
-        
+
         restricoes = new GridBagConstraints();
         tabelaUsuario = super.gerarTabelaUsuario();
         tfNome = super.getTfNome();
@@ -118,14 +119,14 @@ public class PainelEdicaoUsuario extends PainelSistema {
         restricoes.gridheight = GridBagConstraints.REMAINDER;
         restricoes.fill = GridBagConstraints.BOTH;
         this.add(spUsuario, restricoes);
-        
+
         tabelaUsuario.addMouseListener(acaoMouseEditarUsuario);
         super.setBtAtualizar("btAtualizarUsuario", acaoBtAtualizarUsuario);
         super.setBtExcluir("btExcluirUsuario", acaoBtExcluirUsuario);
 
         checkBoxSenha.setActionCommand("SenhaUsuario");
         checkBoxSenha.addActionListener(acaoSenhaUsuario);
-        
+
         this.revalidate();
     }
 
@@ -140,6 +141,7 @@ public class PainelEdicaoUsuario extends PainelSistema {
 
     /**
      * Retorna uma tabela de usuário
+     *
      * @return uma tabela de usuário
      */
     public WebTable getTabelaUsuario() {
@@ -148,6 +150,7 @@ public class PainelEdicaoUsuario extends PainelSistema {
 
     /**
      * Retorna um TextField para o nome do usuário
+     *
      * @return um TextField para o nome do usuário
      */
     @Override
@@ -157,6 +160,7 @@ public class PainelEdicaoUsuario extends PainelSistema {
 
     /**
      * Retorna um TextField para o cpf do usuário
+     *
      * @return um TextField para o cpf do usuário
      */
     @Override
@@ -166,6 +170,7 @@ public class PainelEdicaoUsuario extends PainelSistema {
 
     /**
      * Retorna um TextField para a data de nascimento do usuário
+     *
      * @return um TextField para a data de nascimento do usuário
      */
     @Override
@@ -175,6 +180,7 @@ public class PainelEdicaoUsuario extends PainelSistema {
 
     /**
      * Retorna um PasswordField para o salário do usuário
+     *
      * @return um PasswordField para o salário do usuário
      */
     @Override
@@ -184,6 +190,7 @@ public class PainelEdicaoUsuario extends PainelSistema {
 
     /**
      * Retorna um Button para atualização do usuário
+     *
      * @return um Button para atualização do usuário
      */
     @Override
@@ -194,6 +201,7 @@ public class PainelEdicaoUsuario extends PainelSistema {
 
     /**
      * Retorna um Button para exclusão do usuário
+     *
      * @return um Button para exclusão do usuário
      */
     @Override
@@ -204,6 +212,7 @@ public class PainelEdicaoUsuario extends PainelSistema {
 
     /**
      * Retorna um CheckBox para a senha do usuário
+     *
      * @return um CheckBox para a senha do usuário
      */
     @Override
@@ -214,6 +223,7 @@ public class PainelEdicaoUsuario extends PainelSistema {
 
     /**
      * Retorna um ScrollPane do usuário
+     *
      * @return um ScrollPane do usuário
      */
     public WebScrollPane getSpUsuario() {
@@ -223,6 +233,7 @@ public class PainelEdicaoUsuario extends PainelSistema {
 
     /**
      * Retorna a linha selecionada na tabela de usuário
+     *
      * @return a linha selecionada na tabela de usuário
      */
     public int getLinhaSelecionada() {
@@ -230,10 +241,13 @@ public class PainelEdicaoUsuario extends PainelSistema {
     }
 
     /**
-     * Retorna uma String de uma tabela de acordo com os parametros linha e coluna
+     * Retorna uma String de uma tabela de acordo com os parametros linha e
+     * coluna
+     *
      * @param linha a linha da tabela de usuário
      * @param coluna a coluna da tabela de usuário
-     * @return uma String de uma tabela de acordo com os parametros linha e coluna
+     * @return uma String de uma tabela de acordo com os parametros linha e
+     * coluna
      */
     public String getTextoEm(int linha, int coluna) {
 
@@ -244,6 +258,7 @@ public class PainelEdicaoUsuario extends PainelSistema {
 
     /**
      * Retorna um Object contendo os valores de uma linha da tabela de usuário
+     *
      * @param linhaSelecionada a linha selecionada na tabela de usuário
      * @return um Object contendo os valores de uma linha da tabela de usuário
      */

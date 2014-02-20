@@ -13,6 +13,7 @@ import visao.PainelSistema;
 
 /**
  * Painel para cadastro de cliente
+ *
  * @author Pedro Celestino Silveira Junior
  */
 public class PainelCadastroCliente extends PainelSistema {
@@ -26,12 +27,12 @@ public class PainelCadastroCliente extends PainelSistema {
     private WebComboBox cbTipo;
     private WebScrollPane spCliente;
     private WebTable tabelaCliente;
-    
+
     /**
      * Carrega os componentes do painel
      */
     public void carregarComponentes() {
-        
+
         acaoBtCadastrarCliente = new BtCadastrarCliente();
         restricoes = new GridBagConstraints();
         tabelaCliente = super.gerarTabelaCliente();
@@ -94,10 +95,10 @@ public class PainelCadastroCliente extends PainelSistema {
         this.add(spCliente, restricoes);
 
         super.setBtCadastrar("btCadastrarCliente", acaoBtCadastrarCliente);
-        
+
         this.revalidate();
     }
-    
+
     /**
      * Atualiza a tabela de cliente
      */
@@ -109,6 +110,7 @@ public class PainelCadastroCliente extends PainelSistema {
 
     /**
      * Retorna uma tabela de cliente
+     *
      * @return uma tabela de cliente
      */
     public WebTable getTabelaCliente() {
@@ -117,6 +119,7 @@ public class PainelCadastroCliente extends PainelSistema {
 
     /**
      * Retorna um TextField para o nome do cliente
+     *
      * @return um TextField para o nome do cliente
      */
     @Override
@@ -126,6 +129,7 @@ public class PainelCadastroCliente extends PainelSistema {
 
     /**
      * Retorna um TextField para o cpf do cliente
+     *
      * @return um TextField para o cpf do cliente
      */
     @Override
@@ -135,6 +139,7 @@ public class PainelCadastroCliente extends PainelSistema {
 
     /**
      * Retorna um TextField para a data de nascimento do cliente
+     *
      * @return um TextField para a data de nascimento do cliente
      */
     @Override
@@ -144,6 +149,7 @@ public class PainelCadastroCliente extends PainelSistema {
 
     /**
      * Retorna um ComboBox para o tipo do cliente
+     *
      * @return um ComboBox para o tipo do cliente
      */
     @Override

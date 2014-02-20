@@ -9,21 +9,22 @@ import visao.edicao.PainelEdicaoFuncionario;
 
 /**
  * Acoes do painel para edição de funcionário
+ *
  * @author Pedro Celestino Silveira Junior
  */
 public class BtExcluirFuncionario implements ActionListener {
-    
+
     private int linha;
     private String cpfSelecionado;
     private SistemaDAO sistemaDAO;
     private PainelEdicaoFuncionario painelEdicaoFuncionario;
-    
+
     @Override
     public void actionPerformed(ActionEvent e) {
-        
+
         sistemaDAO = new SistemaDAO();
         painelEdicaoFuncionario = telaPrincipal.getPainelCards().getPainelEdicaoFuncionario();
-        
+
         int opcao = JOptionPane.showConfirmDialog(null, "Deseja Realmente Excluir?", "Atenção", JOptionPane.YES_NO_OPTION);
 
         if (opcao == JOptionPane.YES_OPTION) {

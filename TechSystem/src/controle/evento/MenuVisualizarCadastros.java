@@ -7,6 +7,7 @@ import visao.PainelMenuBar;
 
 /**
  * Acoes do painel de menu
+ *
  * @author Pedro Celestino Silveira Junior
  */
 public class MenuVisualizarCadastros implements ActionListener {

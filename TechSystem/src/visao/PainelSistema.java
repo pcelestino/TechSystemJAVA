@@ -28,6 +28,7 @@ import modelo.SistemaDAO;
 
 /**
  * Painel gera que contém os principais componentes
+ *
  * @author Pedro Celestino Silveira Junior
  */
 public class PainelSistema extends WebPanel {
@@ -59,6 +60,7 @@ public class PainelSistema extends WebPanel {
 
     /**
      * Retorna uma tabela de cliente
+     *
      * @return uma tabela de cliente
      */
     public WebTable gerarTabelaCliente() {
@@ -70,6 +72,7 @@ public class PainelSistema extends WebPanel {
 
     /**
      * Retorna uma tabela de funcionário
+     *
      * @return uma tabela de funcionário
      */
     public WebTable gerarTabelaFuncionario() {
@@ -81,6 +84,7 @@ public class PainelSistema extends WebPanel {
 
     /**
      * Retorna uma tabela de usuário
+     *
      * @return uma tabela de usuário
      */
     public WebTable gerarTabelaUsuario() {
@@ -92,6 +96,7 @@ public class PainelSistema extends WebPanel {
 
     /**
      * Retorna uma tabela de venda
+     *
      * @return uma tabela de venda
      */
     public WebTable gerarTabelaVenda() {
@@ -110,6 +115,7 @@ public class PainelSistema extends WebPanel {
 
     /**
      * Retorna uma tabela atualizada de cliente
+     *
      * @return uma tabela atualizada de cliente
      */
     public WebTable atualizarTabelaCliente() {
@@ -120,6 +126,7 @@ public class PainelSistema extends WebPanel {
 
     /**
      * Retorna uma tabela atualizada de fucionário
+     *
      * @return uma tabela atualizada de fucionário
      */
     public WebTable atualizarTabelaFuncionario() {
@@ -130,6 +137,7 @@ public class PainelSistema extends WebPanel {
 
     /**
      * Retorna uma tabela atualizada de usuário
+     *
      * @return uma tabela atualizada de usuário
      */
     public WebTable atualizarTabelaUsuario() {
@@ -140,6 +148,7 @@ public class PainelSistema extends WebPanel {
 
     /**
      * Retorna uma tabela atualizada de vendas
+     *
      * @return uma tabela atualizada de vendas
      */
     public WebTable atualizarTabelaVenda() {
@@ -157,6 +166,7 @@ public class PainelSistema extends WebPanel {
 
     /**
      * Retorna um Label genérico
+     *
      * @param nome o nome do Label
      * @return um Label genérico
      */
@@ -172,6 +182,7 @@ public class PainelSistema extends WebPanel {
 
     /**
      * Retorna um TextField para nome
+     *
      * @return um TextField para nome
      */
     public WebTextField getTfNome() {
@@ -187,6 +198,7 @@ public class PainelSistema extends WebPanel {
 
     /**
      * Retorna um TextField para nome da venda
+     *
      * @return um TextField para nome da venda
      */
     public WebTextField getTfNomeVenda() {
@@ -202,6 +214,7 @@ public class PainelSistema extends WebPanel {
 
     /**
      * Retorna um TextField para valor da venda
+     *
      * @return um TextField para valor da venda
      */
     public WebFormattedTextField getFtfValorVenda() {
@@ -219,6 +232,7 @@ public class PainelSistema extends WebPanel {
 
     /**
      * Retorna um TextField para salário
+     *
      * @return um TextField para salário
      */
     public WebFormattedTextField getFtfSalario() {
@@ -235,6 +249,7 @@ public class PainelSistema extends WebPanel {
 
     /**
      * Retorna um TextField para cpf
+     *
      * @return um TextField para cpf
      */
     public WebFormattedTextField getFtfCpf() {
@@ -256,6 +271,7 @@ public class PainelSistema extends WebPanel {
 
     /**
      * Retorna um TextField para data de nascimento
+     *
      * @return um TextField para data de nascimento
      */
     public WebFormattedTextField getFtfDataNascimento() {
@@ -277,6 +293,7 @@ public class PainelSistema extends WebPanel {
 
     /**
      * Retorna um PasswordFild para senha
+     *
      * @return um PasswordFild para senha
      */
     public WebPasswordField getPwSenha() {
@@ -293,6 +310,7 @@ public class PainelSistema extends WebPanel {
 
     /**
      * Retorna um ComboBox para tipo
+     *
      * @return um ComboBox para tipo
      */
     @SuppressWarnings("unchecked")
@@ -313,18 +331,19 @@ public class PainelSistema extends WebPanel {
 
     /**
      * Retorna um ComboBox para cpf do cliente
+     *
      * @return um ComboBox para cpf do cliente
      */
     @SuppressWarnings("unchecked")
     public WebComboBox getCbCpfCliente() {
-        
+
         try {
             formatador = new MaskFormatter("## / ## / ####");
             formatador.setPlaceholderCharacter('_');
         } catch (ParseException ex) {
             Logger.getLogger(PainelSistema.class.getName()).log(Level.SEVERE, null, ex);
         }
-        
+
         // ComboBox Cliente
         cbCpfCliente = new WebComboBox();
         cbCpfCliente.setPreferredSize(new Dimension(200, 35));
@@ -334,14 +353,14 @@ public class PainelSistema extends WebPanel {
         consulta = sistemaDao.getColunaSQL("SELECT cpf_cliente FROM clientes", "cpf_cliente");
 
         for (int i = 0; i < consulta.size(); i++) {
-            
+
             cpf = consulta.get(i);
-            
+
             cpf = cpf.substring(0, 3) + "."
-                + cpf.substring(3, 6) + "."
-                + cpf.substring(6, 9) + "-"
-                + cpf.substring(9, 11);
-            
+                    + cpf.substring(3, 6) + "."
+                    + cpf.substring(6, 9) + "-"
+                    + cpf.substring(9, 11);
+
             cbCpfCliente.addItem(cpf);
         }
 
@@ -352,6 +371,7 @@ public class PainelSistema extends WebPanel {
 
     /**
      * Retorna um ComboBox para cpf do funcionário
+     *
      * @return um ComboBox para cpf do funcionário
      */
     @SuppressWarnings("unchecked")
@@ -366,14 +386,14 @@ public class PainelSistema extends WebPanel {
         consulta = sistemaDao.getColunaSQL("SELECT cpf_funcionario FROM funcionarios", "cpf_funcionario");
 
         for (int i = 0; i < consulta.size(); i++) {
-            
+
             cpf = consulta.get(i);
-            
+
             cpf = cpf.substring(0, 3) + "."
-                + cpf.substring(3, 6) + "."
-                + cpf.substring(6, 9) + "-"
-                + cpf.substring(9, 11);
-            
+                    + cpf.substring(3, 6) + "."
+                    + cpf.substring(6, 9) + "-"
+                    + cpf.substring(9, 11);
+
             cbCpfFuncionario.addItem(cpf);
         }
         cbCpfFuncionario.setSelectedItem(null);
@@ -383,6 +403,7 @@ public class PainelSistema extends WebPanel {
 
     /**
      * Retorna um CheckBox para senha
+     *
      * @return um CheckBox para senha
      */
     public WebCheckBox getCheckBoxSenha() {
@@ -397,6 +418,7 @@ public class PainelSistema extends WebPanel {
 
     /**
      * Retorna um Button para cadastro
+     *
      * @return um Button para cadastro
      */
     public WebButton getBtCadastrar() {
@@ -413,6 +435,7 @@ public class PainelSistema extends WebPanel {
 
     /**
      * Retorna um Button para atualização
+     *
      * @return um Button para atualização
      */
     public WebButton getBtAtualizar() {
@@ -429,6 +452,7 @@ public class PainelSistema extends WebPanel {
 
     /**
      * Retorna um Button para exclusão
+     *
      * @return um Button para exclusão
      */
     public WebButton getBtExcluir() {
@@ -445,6 +469,7 @@ public class PainelSistema extends WebPanel {
 
     /**
      * Retorna um Table para pessoas
+     *
      * @return um Table para pessoas
      */
     public WebTable getTbPessoas() {
@@ -467,6 +492,7 @@ public class PainelSistema extends WebPanel {
 
     /**
      * Retorna um ScrollPane para pessoas
+     *
      * @return um ScrollPane para pessoas
      */
     public WebScrollPane getSpPessoas() {
@@ -480,6 +506,7 @@ public class PainelSistema extends WebPanel {
 
     /**
      * Seta uma ação para o botão de cadastro
+     *
      * @param Acao a ação
      * @param Listener para onde será enviada a ação
      */
@@ -490,6 +517,7 @@ public class PainelSistema extends WebPanel {
 
     /**
      * Seta uma ação para o botão de atualização
+     *
      * @param Acao a ação
      * @param Listener para onde será enviada a ação
      */
@@ -500,6 +528,7 @@ public class PainelSistema extends WebPanel {
 
     /**
      * Seta uma ação para o botão de exclusão
+     *
      * @param Acao a ação
      * @param Listener para onde será enviada a ação
      */
@@ -510,6 +539,7 @@ public class PainelSistema extends WebPanel {
 
     /**
      * Retorna um ComboBox atualizado para cpf do cliente
+     *
      * @return um ComboBox atualizado para cpf do cliente
      */
     @SuppressWarnings("unchecked")
@@ -521,14 +551,14 @@ public class PainelSistema extends WebPanel {
         consulta = sistemaDao.getColunaSQL("SELECT cpf_cliente FROM clientes", "cpf_cliente");
 
         for (int i = 0; i < consulta.size(); i++) {
-            
+
             cpf = consulta.get(i);
-            
+
             cpf = cpf.substring(0, 3) + "."
-                + cpf.substring(3, 6) + "."
-                + cpf.substring(6, 9) + "-"
-                + cpf.substring(9, 11);
-            
+                    + cpf.substring(3, 6) + "."
+                    + cpf.substring(6, 9) + "-"
+                    + cpf.substring(9, 11);
+
             cbCpfCliente.addItem(cpf);
         }
 
@@ -539,6 +569,7 @@ public class PainelSistema extends WebPanel {
 
     /**
      * Retorna um ComboBox atualizado para cpf do funcionário
+     *
      * @return um ComboBox atualizado para cpf do funcionário
      */
     @SuppressWarnings("unchecked")
@@ -550,14 +581,14 @@ public class PainelSistema extends WebPanel {
         consulta = sistemaDao.getColunaSQL("SELECT cpf_funcionario FROM funcionarios", "cpf_funcionario");
 
         for (int i = 0; i < consulta.size(); i++) {
-            
+
             cpf = consulta.get(i);
-            
+
             cpf = cpf.substring(0, 3) + "."
-                + cpf.substring(3, 6) + "."
-                + cpf.substring(6, 9) + "-"
-                + cpf.substring(9, 11);
-            
+                    + cpf.substring(3, 6) + "."
+                    + cpf.substring(6, 9) + "-"
+                    + cpf.substring(9, 11);
+
             cbCpfFuncionario.addItem(cpf);
         }
         cbCpfFuncionario.setSelectedItem(null);

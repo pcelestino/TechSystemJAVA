@@ -15,10 +15,11 @@ import javax.swing.JOptionPane;
 
 /**
  * Administra o retorno e a transferência de dados pelo DB
+ *
  * @author Pedro Celestino Silveira Junior
  */
 public class SistemaDAO {
-    
+
     private String nome, cpf, cpfCliente, cpfFuncionario, data, salario,
             valorVenda, tipo, nomeVenda, dia, mes, ano, senha, idVenda;
     private ArrayList<Object[]> dados;
@@ -28,21 +29,22 @@ public class SistemaDAO {
     private ConectaBanco bancoDados;
     private PreparedStatement pst;
     private Date dtValue;
-    /** 
-    * Locale Brasileiro 
-    */  
-    private final Locale BRAZIL = new Locale("pt","BR");  
-    /** 
-    * Símbolos especificos do Real Brasileiro 
-    */  
-    private final DecimalFormatSymbols REAL = new DecimalFormatSymbols(BRAZIL);  
-    /** 
-    * Mascara de dinheiro para Real Brasileiro 
-    */  
-    private final DecimalFormat DINHEIRO_REAL = new DecimalFormat("¤ ###,###,##0.00",REAL);
+    /**
+     * Locale Brasileiro
+     */
+    private final Locale BRAZIL = new Locale("pt", "BR");
+    /**
+     * Símbolos especificos do Real Brasileiro
+     */
+    private final DecimalFormatSymbols REAL = new DecimalFormatSymbols(BRAZIL);
+    /**
+     * Mascara de dinheiro para Real Brasileiro
+     */
+    private final DecimalFormat DINHEIRO_REAL = new DecimalFormat("¤ ###,###,##0.00", REAL);
 
     /**
      * Cadastra um cliente
+     *
      * @param cliente a classe cliente
      */
     public void cadastrarCliente(Cliente cliente) {
@@ -90,6 +92,7 @@ public class SistemaDAO {
 
     /**
      * Cadastra um funcionário
+     *
      * @param funcionario a classe funcionário
      */
     public void cadastrarFuncionario(Funcionario funcionario) {
@@ -137,6 +140,7 @@ public class SistemaDAO {
 
     /**
      * Cadastra um usuário
+     *
      * @param usuario a classe usuário
      */
     public void cadastrarUsuario(Usuario usuario) {
@@ -199,6 +203,7 @@ public class SistemaDAO {
 
     /**
      * Cadastra uma venda
+     *
      * @param venda a classe venda
      */
     public void cadastrarVenda(Venda venda) {
@@ -233,6 +238,7 @@ public class SistemaDAO {
 
     /**
      * Atualiza os dados do cliente
+     *
      * @param cliente a classe cliente
      * @param cpfSelecionado o cpf selecionado na tabela cliente
      */
@@ -281,6 +287,7 @@ public class SistemaDAO {
 
     /**
      * Atualiza os dados do funcionário
+     *
      * @param funcionario a classe funcionário
      * @param cpfSelecionado o cpf selecionado na tabela de funcionários
      */
@@ -329,6 +336,7 @@ public class SistemaDAO {
 
     /**
      * Atualiza os dados do usuário
+     *
      * @param usuario a classe usuário
      * @param cpfSelecionado o cpf selecionado na tabela de usuários
      */
@@ -388,6 +396,7 @@ public class SistemaDAO {
 
     /**
      * Atualiza os dados da venda
+     *
      * @param venda a classe venda
      * @param idVenda o id da tabela de vendas
      */
@@ -401,7 +410,7 @@ public class SistemaDAO {
             bancoDados.conectar();
 
             pst = bancoDados.getConexao().prepareStatement("UPDATE vendas set cpf_cliente = ?, cpf_funcionario = ?, nome_venda = ?, valor_venda = ? where id_venda = ?");
-            
+
             pst.setString(1, venda.getCpfCliente());
             pst.setString(2, venda.getCpfFuncionario());
             pst.setString(3, venda.getNomeVenda());
@@ -413,7 +422,7 @@ public class SistemaDAO {
             JOptionPane.showMessageDialog(null, "Venda atualizada");
 
         } catch (SQLException e1) {
-            
+
             JOptionPane.showMessageDialog(null, "Erro na inserção!\nErro: " + e1.getMessage());
         } finally {
 
@@ -423,6 +432,7 @@ public class SistemaDAO {
 
     /**
      * Cria a tabela de clientes
+     *
      * @return uma tabela de clientes
      */
     public Tabela gerarTabelaCliente() {
@@ -479,6 +489,7 @@ public class SistemaDAO {
 
     /**
      * Cria a tabela de funcionários
+     *
      * @return uma tabela de funcionários
      */
     public Tabela gerarTabelaFuncionario() {
@@ -495,7 +506,7 @@ public class SistemaDAO {
                     + "salario_funcionario FROM funcionarios");
 
             while (bancoDados.getResultado().next()) {
-                
+
                 // Ler o registro do banco de dados
                 nome = bancoDados.getResultado().getString("nome_funcionario");
                 cpf = bancoDados.getResultado().getString("cpf_funcionario");
@@ -536,6 +547,7 @@ public class SistemaDAO {
 
     /**
      * Cria a tabela de usuários
+     *
      * @return uma tabela de usuários
      */
     public Tabela gerarTabelaUsuario() {
@@ -591,6 +603,7 @@ public class SistemaDAO {
 
     /**
      * Cria a tabela de vendas
+     *
      * @return uma tabela de vendas
      */
     public Tabela gerarTabelaVenda() {
@@ -646,6 +659,7 @@ public class SistemaDAO {
 
     /**
      * Seleciona uma coluna de uma tabela no DB
+     *
      * @param sql o parametro para a pesquisa no DB
      * @param coluna a coluna que será retornada do DB
      * @return um ArrayList de Strings com a coluna pesquisada
@@ -675,6 +689,7 @@ public class SistemaDAO {
 
     /**
      * Verifica se a senha passada existe no DB
+     *
      * @param loginUsuario o cpf do usuário
      * @param senhaUsuario a senha para verificação
      * @throws SenhaInvalidaException se a senha não existir no DB
@@ -701,6 +716,7 @@ public class SistemaDAO {
 
     /**
      * Exclui a linha da tabela selecionada pelos parâmetros
+     *
      * @param tabela a tabela de onde será excluida uma linha
      * @param coluna uma coluna que servirá como primeiro parâmetro para seleção
      * @param valor um valor para combinar com a coluna e selecionar a linha

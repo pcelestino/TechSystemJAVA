@@ -7,6 +7,7 @@ import java.awt.HeadlessException;
 
 /**
  * A tela principal do sistema
+ *
  * @author Pedro Celestino Silveira Junior
  */
 public class TelaPrincipal extends WebFrame {
@@ -17,6 +18,7 @@ public class TelaPrincipal extends WebFrame {
 
     /**
      * Constrói a tela principal do sistema
+     *
      * @throws HeadlessException
      */
     public TelaPrincipal() throws HeadlessException {
@@ -35,6 +37,7 @@ public class TelaPrincipal extends WebFrame {
 
     /**
      * Retorna um painel de menu
+     *
      * @return um painel de menu
      */
     public PainelMenuBar getPainelMenuBar() {
@@ -43,6 +46,7 @@ public class TelaPrincipal extends WebFrame {
 
     /**
      * Retorna um painel de Cards
+     *
      * @return um painel de Cards
      */
     public PainelCards getPainelCards() {

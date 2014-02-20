@@ -2,7 +2,7 @@ package modelo;
 
 /**
  * Adiciona e retorna atributos de usuário
- * 
+ *
  * @author Pedro Celestino Silveira Junior
  */
 public class Usuario extends Pessoa {
@@ -12,7 +12,7 @@ public class Usuario extends Pessoa {
 
     /**
      * Constrói o usuário com seus parâmetros obrigatórios
-     * 
+     *
      * @param nome o nome do usuário
      * @param login o login do usuário, um cpf válido
      * @param senha a senha do usuário
@@ -26,7 +26,7 @@ public class Usuario extends Pessoa {
 
     /**
      * Retorna o login do usuário
-     * 
+     *
      * @return o login do usuário, um cpf válido
      */
     public String getLogin() {
@@ -35,7 +35,7 @@ public class Usuario extends Pessoa {
 
     /**
      * Seta o login do usuário
-     * 
+     *
      * @param login o login do usuário, um cpf válido
      */
     private void setLogin(String login) {
@@ -44,16 +44,16 @@ public class Usuario extends Pessoa {
 
     /**
      * Retorna a senha do usuário
-     * 
+     *
      * @return a senha do usuário
      */
     public char[] getSenha() {
         return senha;
     }
-    
+
     /**
      * Seta a senha do usuário
-     * 
+     *
      * @param senha a senha do usuário
      */
     private void setSenha(char[] senha) {

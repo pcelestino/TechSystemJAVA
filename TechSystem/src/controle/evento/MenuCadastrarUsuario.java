@@ -7,6 +7,7 @@ import visao.PainelMenuBar;
 
 /**
  * Acoes do painel de menu
+ *
  * @author Pedro Celestino Silveira Junior
  */
 public class MenuCadastrarUsuario implements ActionListener {
@@ -16,21 +17,21 @@ public class MenuCadastrarUsuario implements ActionListener {
     public MenuCadastrarUsuario(PainelMenuBar painelMenuBar) {
         this.painelMenuBar = painelMenuBar;
     }
-    
+
     @Override
     public void actionPerformed(ActionEvent e) {
-            
-            // Remove todos os componentes de todos os paineis
-            painelMenuBar.removerComponentes();
 
-            // Carrega os componentes
-            telaPrincipal.getPainelCards().getPainelCadastroUsuario().carregarComponentes();
+        // Remove todos os componentes de todos os paineis
+        painelMenuBar.removerComponentes();
 
-            // Limpa todos os componentes
-            telaPrincipal.getPainelCards().getPainelCadastroUsuario().limpaComponentes();
+        // Carrega os componentes
+        telaPrincipal.getPainelCards().getPainelCadastroUsuario().carregarComponentes();
 
-            // Ativa o painel de cadastros de usuários
-            telaPrincipal.getPainelCards().setPainel("CadastroUsuario");
+        // Limpa todos os componentes
+        telaPrincipal.getPainelCards().getPainelCadastroUsuario().limpaComponentes();
+
+        // Ativa o painel de cadastros de usuários
+        telaPrincipal.getPainelCards().setPainel("CadastroUsuario");
     }
-    
+
 }

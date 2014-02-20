@@ -2,7 +2,7 @@ package modelo;
 
 /**
  * Adiciona e retorna atributos de cliente
- * 
+ *
  * @author Pedro Celestino Silveira Junior
  */
 public class Cliente extends Pessoa {
@@ -11,7 +11,7 @@ public class Cliente extends Pessoa {
 
     /**
      * Constrói o cliente com seus parâmetros obrigatórios
-     * 
+     *
      * @param nome o nome do cliente
      * @param cpf o cpf do cliente
      */
@@ -22,7 +22,7 @@ public class Cliente extends Pessoa {
 
     /**
      * Retorna o tipo do cliente
-     * 
+     *
      * @return o tipo do cliente (Normal, Avançado, Especial)
      */
     public String getTipo() {
@@ -31,7 +31,7 @@ public class Cliente extends Pessoa {
 
     /**
      * Seta o tipo do cliente
-     * 
+     *
      * @param tipo o tipo do cliente (Normal, Avançado, Especial)
      */
     public void setTipo(String tipo) {

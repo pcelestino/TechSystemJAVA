@@ -12,6 +12,7 @@ import visao.PainelSistema;
 
 /**
  * Painel para cadastro de funcionário
+ *
  * @author Pedro Celestino Silveira Junior
  */
 public class PainelCadastroFuncionario extends PainelSistema {
@@ -92,7 +93,7 @@ public class PainelCadastroFuncionario extends PainelSistema {
         this.add(spFuncionario, restricoes);
 
         super.setBtCadastrar("btCadastrarFuncionario", acaoBtCadastrarFuncionario);
-        
+
         this.revalidate();
     }
 
@@ -107,6 +108,7 @@ public class PainelCadastroFuncionario extends PainelSistema {
 
     /**
      * Retorna uma tabela de funcionário
+     *
      * @return uma tabela de funcionário
      */
     public WebTable getTabelaFuncionario() {
@@ -115,6 +117,7 @@ public class PainelCadastroFuncionario extends PainelSistema {
 
     /**
      * Retorna um TextField para o nome do funcionário
+     *
      * @return um TextField para o nome do funcionário
      */
     @Override
@@ -124,6 +127,7 @@ public class PainelCadastroFuncionario extends PainelSistema {
 
     /**
      * Retorna um TextField para o cpf do funcionário
+     *
      * @return um TextField para o cpf do funcionário
      */
     @Override
@@ -133,6 +137,7 @@ public class PainelCadastroFuncionario extends PainelSistema {
 
     /**
      * Retorna um TextField para a data de nascimento do funcionário
+     *
      * @return um TextField para a data de nascimento do funcionário
      */
     @Override
@@ -142,6 +147,7 @@ public class PainelCadastroFuncionario extends PainelSistema {
 
     /**
      * Retorna um TextField para salario do funcionário
+     *
      * @return um TextField para salario do funcionário
      */
     @Override

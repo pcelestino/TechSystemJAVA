@@ -2,6 +2,7 @@ package controle.excecao;
 
 /**
  * Exceção para a senha inválida
+ *
  * @author Pedro Celestino Silveira Junior
  */
 public class SenhaInvalidaException extends Exception {

@@ -2,7 +2,7 @@ package modelo;
 
 /**
  * Adiciona e retorna atributos de venda
- * 
+ *
  * @author Pedro
  */
 public class Venda {
@@ -10,7 +10,8 @@ public class Venda {
     private String cpfCliente, cpfFuncionario, nomeVenda;
     private double valorVenda;
 
-    /**Constrói a venda com seus parâmetros obrigatórios
+    /**
+     * Constrói a venda com seus parâmetros obrigatórios
      *
      * @param cpfCliente o cpf do cliente
      * @param cpfFuncionario o cpf do funcionário
@@ -26,16 +27,16 @@ public class Venda {
 
     /**
      * Retorna o cpf do cliente
-     * 
+     *
      * @return o cpf do cliente
      */
     public String getCpfCliente() {
         return cpfCliente;
     }
-    
+
     /**
      * Seta o cpf do usuário
-     * 
+     *
      * @param cpfUsuario o cpf do usuário
      */
     private void setCpfCliente(String cpfUsuario) {
@@ -44,7 +45,7 @@ public class Venda {
 
     /**
      * Retorna o cpf do funcionário
-     * 
+     *
      * @return o cpf do funcionário
      */
     public String getCpfFuncionario() {
@@ -53,7 +54,7 @@ public class Venda {
 
     /**
      * Seta o cpf do funcionário
-     * 
+     *
      * @param cpfFuncionario o cpf do funcionário
      */
     private void setCpfFuncionario(String cpfFuncionario) {
@@ -62,7 +63,7 @@ public class Venda {
 
     /**
      * Retorna o nome da venda
-     * 
+     *
      * @return o nome da venda
      */
     public String getNomeVenda() {
@@ -71,7 +72,7 @@ public class Venda {
 
     /**
      * Seta o nome da venda
-     * 
+     *
      * @param nomeVenda o nome da venda
      */
     private void setNomeVenda(String nomeVenda) {
@@ -80,16 +81,16 @@ public class Venda {
 
     /**
      * Retorna o valor da venda
-     * 
+     *
      * @return o valor da venda
      */
     public double getValorVenda() {
         return valorVenda;
     }
-    
+
     /**
      * Seta o valor da venda
-     * 
+     *
      * @param valorVenda o valor da venda
      */
     private void setValorVenda(double valorVenda) {

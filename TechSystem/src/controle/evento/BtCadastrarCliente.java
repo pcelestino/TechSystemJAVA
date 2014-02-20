@@ -14,6 +14,7 @@ import visao.cadastro.PainelCadastroCliente;
 
 /**
  * Acoes do painel para cadastro de cliente
+ *
  * @author Pedro Celestino Silveira Junior
  */
 public class BtCadastrarCliente implements ActionListener {
@@ -29,7 +30,7 @@ public class BtCadastrarCliente implements ActionListener {
         try {
             sistemaDAO = new SistemaDAO();
             painelCadastroCliente = telaPrincipal.getPainelCards().getPainelCadastroCliente();
-            
+
             // Instancia o objeto Validador para validar os dados
             valida = new Validador();
 

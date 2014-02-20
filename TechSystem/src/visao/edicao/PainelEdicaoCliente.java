@@ -17,16 +17,17 @@ import visao.PainelSistema;
 
 /**
  * Painel para edição de cliente
+ *
  * @author Pedro Celestino Silveira Junior
  */
 public class PainelEdicaoCliente extends PainelSistema {
 
     private static final long serialVersionUID = 1L;
-    
+
     private BtAtualizarCliente acaoBtAtualizarCliente;
     private BtExcluirCliente acaoBtExcluirCliente;
     private MouseEditarCliente acaoMouseEditarCliente;
-    
+
     private GridBagConstraints restricoes;
     private TitledBorder bordaTitulo;
     private WebTextField tfNome;
@@ -46,7 +47,7 @@ public class PainelEdicaoCliente extends PainelSistema {
         acaoBtAtualizarCliente = new BtAtualizarCliente();
         acaoBtExcluirCliente = new BtExcluirCliente();
         acaoMouseEditarCliente = new MouseEditarCliente();
-        
+
         restricoes = new GridBagConstraints();
         tabelaCliente = super.gerarTabelaCliente();
         tfNome = super.getTfNome();
@@ -116,7 +117,7 @@ public class PainelEdicaoCliente extends PainelSistema {
         tabelaCliente.addMouseListener(acaoMouseEditarCliente);
         super.setBtAtualizar("btAtualizarCliente", acaoBtAtualizarCliente);
         super.setBtExcluir("btExcluirCliente", acaoBtExcluirCliente);
-        
+
         this.revalidate();
     }
 
@@ -131,6 +132,7 @@ public class PainelEdicaoCliente extends PainelSistema {
 
     /**
      * Retorna uma tabela de cliente
+     *
      * @return uma tabela de cliente
      */
     public WebTable getTabelaCliente() {
@@ -139,6 +141,7 @@ public class PainelEdicaoCliente extends PainelSistema {
 
     /**
      * Retorna um TextField para o nome do cliente
+     *
      * @return um TextField para o nome do cliente
      */
     @Override
@@ -148,6 +151,7 @@ public class PainelEdicaoCliente extends PainelSistema {
 
     /**
      * Retorna um TextField para o cpf do cliente
+     *
      * @return um TextField para o cpf do cliente
      */
     @Override
@@ -157,6 +161,7 @@ public class PainelEdicaoCliente extends PainelSistema {
 
     /**
      * Retorna um TextField para a data de nascimento do cliente
+     *
      * @return um TextField para a data de nascimento do cliente
      */
     @Override
@@ -166,6 +171,7 @@ public class PainelEdicaoCliente extends PainelSistema {
 
     /**
      * Retorna um ComboBox para o tipo do cliente
+     *
      * @return um ComboBox para o tipo do cliente
      */
     @Override
@@ -175,6 +181,7 @@ public class PainelEdicaoCliente extends PainelSistema {
 
     /**
      * Retorna um Button para atualização do cliente
+     *
      * @return um Button para atualização do cliente
      */
     @Override
@@ -185,6 +192,7 @@ public class PainelEdicaoCliente extends PainelSistema {
 
     /**
      * Retorna um Button para exclusão do cliente
+     *
      * @return um Button para exclusão do cliente
      */
     @Override
@@ -195,6 +203,7 @@ public class PainelEdicaoCliente extends PainelSistema {
 
     /**
      * Retorna a linha selecionada na tabela de cliente
+     *
      * @return a linha selecionada na tabela de cliente
      */
     public int getLinhaSelecionada() {
@@ -202,10 +211,13 @@ public class PainelEdicaoCliente extends PainelSistema {
     }
 
     /**
-     * Retorna uma String de uma tabela de acordo com os parametros linha e coluna
+     * Retorna uma String de uma tabela de acordo com os parametros linha e
+     * coluna
+     *
      * @param linha a linha da tabela de cliente
      * @param coluna a coluna da tabela de cliente
-     * @return uma String de uma tabela de acordo com os parametros linha e coluna
+     * @return uma String de uma tabela de acordo com os parametros linha e
+     * coluna
      */
     public String getTextoEm(int linha, int coluna) {
 
@@ -216,6 +228,7 @@ public class PainelEdicaoCliente extends PainelSistema {
 
     /**
      * Retorna um Object contendo os valores de uma linha da tabela de cliente
+     *
      * @param linhaSelecionada a linha selecionada na tabela de cliente
      * @return um Object contendo os valores de uma linha da tabela de cliente
      */

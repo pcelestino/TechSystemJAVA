@@ -2,6 +2,7 @@ package controle.excecao;
 
 /**
  * Exceção para a data inválida
+ *
  * @author Pedro Celestino Silveira Junior
  */
 public class DataInvalidaException extends Exception {
@@ -10,6 +11,7 @@ public class DataInvalidaException extends Exception {
 
     /**
      * Constrói a exceção
+     *
      * @param data a data inválida
      * @param texto um texto para complementar a descrição da exceção
      */

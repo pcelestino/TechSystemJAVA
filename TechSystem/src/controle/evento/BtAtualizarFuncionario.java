@@ -14,6 +14,7 @@ import visao.edicao.PainelEdicaoFuncionario;
 
 /**
  * Acoes do painel para edição de funcionário
+ *
  * @author Pedro Celestino Silveira Junior
  */
 public class BtAtualizarFuncionario implements ActionListener {
@@ -24,13 +25,13 @@ public class BtAtualizarFuncionario implements ActionListener {
     private SistemaDAO sistemaDAO;
     private PainelEdicaoFuncionario painelEdicaoFuncionario;
     private int linha;
-    
+
     @Override
     public void actionPerformed(ActionEvent e) {
         try {
             sistemaDAO = new SistemaDAO();
             painelEdicaoFuncionario = telaPrincipal.getPainelCards().getPainelEdicaoFuncionario();
-            
+
             // Instância o objeto Validador para validar os dados
             valida = new Validador();
 

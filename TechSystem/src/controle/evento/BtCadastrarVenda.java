@@ -13,10 +13,11 @@ import visao.cadastro.PainelCadastroVenda;
 
 /**
  * Acoes do painel para cadastro de venda
+ *
  * @author Pedro Celestino Silveira Junior
  */
 public class BtCadastrarVenda implements ActionListener {
-    
+
     private Venda venda;
     private PainelCadastroVenda painelCadastroVenda;
     private String nomeVenda, valorVenda, cpfCliente, cpfFuncionario;
@@ -28,7 +29,7 @@ public class BtCadastrarVenda implements ActionListener {
         try {
             sistemaDAO = new SistemaDAO();
             painelCadastroVenda = telaPrincipal.getPainelCards().getPainelCadastroVenda();
-            
+
             // Instância o objeto Validador para validar os dados
             valida = new Validador();
 

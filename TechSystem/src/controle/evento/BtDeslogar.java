@@ -9,12 +9,13 @@ import visao.TelaLogin;
 
 /**
  * Acoes do painel de menu
+ *
  * @author Pedro Celestino Silveira Junior
  */
 public class BtDeslogar implements ActionListener {
-    
+
     private TelaLogin telaLogin;
-    
+
     @Override
     public void actionPerformed(ActionEvent e) {
         int opcao = JOptionPane.showConfirmDialog(null,

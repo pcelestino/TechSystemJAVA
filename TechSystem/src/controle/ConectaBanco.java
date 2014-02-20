@@ -73,11 +73,10 @@ public class ConectaBanco {
 
         } catch (SQLException e) {
 
-            
             JOptionPane.showMessageDialog(null, "Erro de conexão!\nErro: " + e.getMessage(), "Erro", JOptionPane.ERROR_MESSAGE);
         } catch (NullPointerException e) {
         }
-        
+
         return isConectado;
     }
 
@@ -309,6 +308,7 @@ public class ConectaBanco {
 
     /**
      * Seta o driver correto para conexão ao DB
+     *
      * @param driver a String contendo os párâmetros para o driver
      */
     public static void setDriver(String driver) {
@@ -317,6 +317,7 @@ public class ConectaBanco {
 
     /**
      * Seta o caminho para a conexão ao DB
+     *
      * @param caminho a String que contém os parãmetros para a conexão
      */
     public static void setCaminho(String caminho) {
@@ -325,6 +326,7 @@ public class ConectaBanco {
 
     /**
      * Seta o login do DB
+     *
      * @param usuario o login do DB
      */
     public static void setUsuario(String usuario) {
@@ -333,6 +335,7 @@ public class ConectaBanco {
 
     /**
      * Seta a senha do DB
+     *
      * @param senha a senha do DB
      */
     public static void setSenha(String senha) {
@@ -341,6 +344,7 @@ public class ConectaBanco {
 
     /**
      * Seta o nome do DB
+     *
      * @param dbNome o nome do DB
      */
     public static void setDbNome(String dbNome) {
@@ -349,6 +353,7 @@ public class ConectaBanco {
 
     /**
      * Seta o tipo do DB
+     *
      * @param dbTipo o tipo do DB
      */
     public static void setDbTipo(String dbTipo) {
@@ -357,6 +362,7 @@ public class ConectaBanco {
 
     /**
      * Retorna o nome do DB
+     *
      * @return o nome do DB
      */
     public static String getDbNome() {
@@ -365,6 +371,7 @@ public class ConectaBanco {
 
     /**
      * Retorna o tipo do DB
+     *
      * @return o tipo do DB
      */
     public static String getDbTipo() {
@@ -373,6 +380,7 @@ public class ConectaBanco {
 
     /**
      * Retorna o driver do DB
+     *
      * @return o driver do DB
      */
     public static String getDriver() {
@@ -381,6 +389,7 @@ public class ConectaBanco {
 
     /**
      * Retorna o login do DB
+     *
      * @return o login do DB
      */
     public static String getUsuario() {
@@ -389,6 +398,7 @@ public class ConectaBanco {
 
     /**
      * Retorna a senha do DB
+     *
      * @return a senha do DB
      */
     public static String getSenha() {
@@ -397,6 +407,7 @@ public class ConectaBanco {
 
     /**
      * Retorna o caminho do DB
+     *
      * @return o caminho do DB
      */
     public static String getCaminho() {
@@ -405,6 +416,7 @@ public class ConectaBanco {
 
     /**
      * Retorna um Connection do DB
+     *
      * @return um Connection do DB
      */
     public Connection getConexao() {
@@ -413,6 +425,7 @@ public class ConectaBanco {
 
     /**
      * Retorna um ResultSet do DB
+     *
      * @return um ResultSet do DB
      */
     public ResultSet getResultado() {

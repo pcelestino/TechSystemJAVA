@@ -16,16 +16,17 @@ import visao.PainelSistema;
 
 /**
  * Painel para edição de funcionário
+ *
  * @author Pedro Celestino Silveira Junior
  */
 public class PainelEdicaoFuncionario extends PainelSistema {
 
     private static final long serialVersionUID = 1L;
-    
+
     private BtAtualizarFuncionario acaoBtAtualizarFuncionario;
     private BtExcluirFuncionario acaoBtExcluirFuncionario;
     private MouseEditarFuncionario acaoMouseEditarFuncionario;
-    
+
     private GridBagConstraints restricoes;
     private TitledBorder bordaTitulo;
     private WebTextField tfNome;
@@ -44,7 +45,7 @@ public class PainelEdicaoFuncionario extends PainelSistema {
         acaoBtAtualizarFuncionario = new BtAtualizarFuncionario();
         acaoBtExcluirFuncionario = new BtExcluirFuncionario();
         acaoMouseEditarFuncionario = new MouseEditarFuncionario();
-        
+
         restricoes = new GridBagConstraints();
         tabelaFuncionario = super.gerarTabelaFuncionario();
         tfNome = super.getTfNome();
@@ -114,7 +115,7 @@ public class PainelEdicaoFuncionario extends PainelSistema {
         tabelaFuncionario.addMouseListener(acaoMouseEditarFuncionario);
         super.setBtAtualizar("btAtualizarFuncionario", acaoBtAtualizarFuncionario);
         super.setBtExcluir("btExcluirFuncionario", acaoBtExcluirFuncionario);
-        
+
         this.revalidate();
     }
 
@@ -129,6 +130,7 @@ public class PainelEdicaoFuncionario extends PainelSistema {
 
     /**
      * Retorna uma tabela de funcionário
+     *
      * @return uma tabela de funcionário
      */
     public WebTable getTabelaFuncionario() {
@@ -137,6 +139,7 @@ public class PainelEdicaoFuncionario extends PainelSistema {
 
     /**
      * Retorna um TextField para o nome do funcionário
+     *
      * @return um TextField para o nome do funcionário
      */
     @Override
@@ -146,6 +149,7 @@ public class PainelEdicaoFuncionario extends PainelSistema {
 
     /**
      * Retorna um TextField para o cpf do funcionário
+     *
      * @return um TextField para o cpf do funcionário
      */
     @Override
@@ -155,6 +159,7 @@ public class PainelEdicaoFuncionario extends PainelSistema {
 
     /**
      * Retorna um TextField para a data de nascimento do funcionário
+     *
      * @return um TextField para a data de nascimento do funcionário
      */
     @Override
@@ -164,6 +169,7 @@ public class PainelEdicaoFuncionario extends PainelSistema {
 
     /**
      * Retorna um TextField para o salário do funcionário
+     *
      * @return um TextField para o salário do funcionário
      */
     @Override
@@ -173,6 +179,7 @@ public class PainelEdicaoFuncionario extends PainelSistema {
 
     /**
      * Retorna um Button para atualização do funcionário
+     *
      * @return um Button para atualização do funcionário
      */
     @Override
@@ -183,6 +190,7 @@ public class PainelEdicaoFuncionario extends PainelSistema {
 
     /**
      * Retorna um Button para exclusão do funcionário
+     *
      * @return um Button para exclusão do funcionário
      */
     @Override
@@ -193,6 +201,7 @@ public class PainelEdicaoFuncionario extends PainelSistema {
 
     /**
      * Retorna a linha selecionada na tabela de funcionário
+     *
      * @return a linha selecionada na tabela de funcionário
      */
     public int getLinhaSelecionada() {
@@ -200,10 +209,13 @@ public class PainelEdicaoFuncionario extends PainelSistema {
     }
 
     /**
-     * Retorna uma String de uma tabela de acordo com os parametros linha e coluna
+     * Retorna uma String de uma tabela de acordo com os parametros linha e
+     * coluna
+     *
      * @param linha a linha da tabela de funcionário
      * @param coluna a coluna da tabela de funcionário
-     * @return uma String de uma tabela de acordo com os parametros linha e coluna
+     * @return uma String de uma tabela de acordo com os parametros linha e
+     * coluna
      */
     public String getTextoEm(int linha, int coluna) {
 
@@ -213,9 +225,12 @@ public class PainelEdicaoFuncionario extends PainelSistema {
     }
 
     /**
-     * Retorna um Object contendo os valores de uma linha da tabela de funcionário
+     * Retorna um Object contendo os valores de uma linha da tabela de
+     * funcionário
+     *
      * @param linhaSelecionada a linha selecionada na tabela de funcionário
-     * @return um Object contendo os valores de uma linha da tabela de funcionário
+     * @return um Object contendo os valores de uma linha da tabela de
+     * funcionário
      */
     public ArrayList<Object> getValoresEm(int linhaSelecionada) {
 

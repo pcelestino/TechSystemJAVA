@@ -17,6 +17,7 @@ import visao.edicao.PainelEdicaoUsuario;
 
 /**
  * Acoes do painel para edição de usuário
+ *
  * @author Pedro Celestino Silveira Junior
  */
 public class BtAtualizarUsuario implements ActionListener {

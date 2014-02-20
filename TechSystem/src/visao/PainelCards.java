@@ -16,6 +16,7 @@ import visao.visualizacao.PainelViCadastros;
 
 /**
  * Painel que agrupa todos os painéis
+ *
  * @author Pedro Celestino Silveira Junior
  */
 public class PainelCards {
@@ -67,6 +68,7 @@ public class PainelCards {
 
     /**
      * Seleciona o painel
+     *
      * @param painel o nome do painel que será exposto
      */
     public void setPainel(String painel) {
@@ -75,6 +77,7 @@ public class PainelCards {
 
     /**
      * Retorna o painel principal
+     *
      * @return o painel principal
      */
     public JPanel getPnPrincipal() {
@@ -83,6 +86,7 @@ public class PainelCards {
 
     /**
      * Retorna um painel para cadastro de cliente
+     *
      * @return um painel para cadastro de cliente
      */
     public PainelCadastroCliente getPainelCadastroCliente() {
@@ -91,6 +95,7 @@ public class PainelCards {
 
     /**
      * Retorna um painel para cadastro de funcionário
+     *
      * @return um painel para cadastro de funcionário
      */
     public PainelCadastroFuncionario getPainelCadastroFuncionario() {
@@ -99,6 +104,7 @@ public class PainelCards {
 
     /**
      * Retorna um painel para cadastro de usuário
+     *
      * @return um painel para cadastro de usuário
      */
     public PainelCadastroUsuario getPainelCadastroUsuario() {
@@ -107,6 +113,7 @@ public class PainelCards {
 
     /**
      * Retorna um painel para cadastro de venda
+     *
      * @return um painel para cadastro de venda
      */
     public PainelCadastroVenda getPainelCadastroVenda() {
@@ -115,6 +122,7 @@ public class PainelCards {
 
     /**
      * Retorna um painel para edição de cliente
+     *
      * @return um painel para edição de cliente
      */
     public PainelEdicaoCliente getPainelEdicaoCliente() {
@@ -123,6 +131,7 @@ public class PainelCards {
 
     /**
      * Retorna um painel para edição de funcionário
+     *
      * @return um painel para edição de funcionário
      */
     public PainelEdicaoFuncionario getPainelEdicaoFuncionario() {
@@ -131,6 +140,7 @@ public class PainelCards {
 
     /**
      * Retorna um painel para edição de usuário
+     *
      * @return um painel para edição de usuário
      */
     public PainelEdicaoUsuario getPainelEdicaoUsuario() {
@@ -139,6 +149,7 @@ public class PainelCards {
 
     /**
      * Retorna um painel para edição de venda
+     *
      * @return um painel para edição de venda
      */
     public PainelEdicaoVenda getPainelEdicaoVenda() {
@@ -147,6 +158,7 @@ public class PainelCards {
 
     /**
      * Retorna um painel para visualização de cadastros
+     *
      * @return um painel para visualização de cadastros
      */
     public PainelViCadastros getPainelViCadastros() {

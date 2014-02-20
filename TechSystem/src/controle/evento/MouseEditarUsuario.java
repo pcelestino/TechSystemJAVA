@@ -8,6 +8,7 @@ import visao.edicao.PainelEdicaoUsuario;
 
 /**
  * Acoes do painel para edição de usuário
+ *
  * @author Pedro Celestino Silveira Junior
  */
 public class MouseEditarUsuario implements MouseListener {
@@ -15,16 +16,16 @@ public class MouseEditarUsuario implements MouseListener {
     private PainelEdicaoUsuario painelEdicaoUsuario;
     private ArrayList<Object> obj;
     private int linha;
-    
+
     @Override
     public void mouseClicked(MouseEvent e) {
     }
 
     @Override
     public void mousePressed(MouseEvent e) {
-        
+
         painelEdicaoUsuario = telaPrincipal.getPainelCards().getPainelEdicaoUsuario();
-        
+
         // Habilita os componentes
         painelEdicaoUsuario.habilitaComponentes();
 

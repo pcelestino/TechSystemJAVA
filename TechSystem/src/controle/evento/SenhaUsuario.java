@@ -7,15 +7,16 @@ import visao.edicao.PainelEdicaoUsuario;
 
 /**
  * Acoes do painel para edição de usuário
+ *
  * @author Pedro Celestino Silveira Junior
  */
 public class SenhaUsuario implements ActionListener {
 
     private PainelEdicaoUsuario painelEdicaoUsuario;
-    
+
     @Override
     public void actionPerformed(ActionEvent e) {
-        
+
         painelEdicaoUsuario = telaPrincipal.getPainelCards().getPainelEdicaoUsuario();
 
         if (painelEdicaoUsuario.getCheckBoxSenha().isSelected()) {

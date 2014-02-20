@@ -14,23 +14,24 @@ import visao.edicao.PainelEdicaoCliente;
 
 /**
  * Acoes do painel para edição de cliente
+ *
  * @author Pedro Celestino Silveira Junior
  */
 public class BtAtualizarCliente implements ActionListener {
-    
+
     private Cliente cliente;
     private Validador valida;
     private String nome, cpf, cpfSelecionado, dataNascimento, tipo;
     private SistemaDAO sistemaDAO;
     private PainelEdicaoCliente painelEdicaoCliente;
     private int linha;
-    
+
     @Override
     public void actionPerformed(ActionEvent e) {
         try {
             sistemaDAO = new SistemaDAO();
             painelEdicaoCliente = telaPrincipal.getPainelCards().getPainelEdicaoCliente();
-            
+
             // Instância o objeto Validador para validar os dados
             valida = new Validador();
 

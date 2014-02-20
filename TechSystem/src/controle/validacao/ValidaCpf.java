@@ -2,6 +2,7 @@ package controle.validacao;
 
 /**
  * Validador de cpf oficial
+ *
  * @author Pedro Celestino Silveira Junior
  */
 public class ValidaCpf {

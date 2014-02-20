@@ -15,6 +15,7 @@ import visao.PainelSistema;
 
 /**
  * Painel para cadastro de venda
+ *
  * @author Pedro Celestino Silveira Junior
  */
 public class PainelCadastroVenda extends PainelSistema {
@@ -115,7 +116,7 @@ public class PainelCadastroVenda extends PainelSistema {
         this.add(painelAbas, restricoes);
 
         super.setBtCadastrar("btCadastrarVenda", acaoBtCadastrarVenda);
-        
+
         this.revalidate();
     }
 
@@ -154,6 +155,7 @@ public class PainelCadastroVenda extends PainelSistema {
 
     /**
      * Retorna uma tabela de venda
+     *
      * @return uma tabela de venda
      */
     public WebTable getTabelaVenda() {
@@ -162,6 +164,7 @@ public class PainelCadastroVenda extends PainelSistema {
 
     /**
      * Retorna uma tabela de cliente
+     *
      * @return uma tabela de cliente
      */
     public WebTable getTabelaCliente() {
@@ -170,6 +173,7 @@ public class PainelCadastroVenda extends PainelSistema {
 
     /**
      * Retorna uma tabela de funcionário
+     *
      * @return uma tabela de funcionário
      */
     public WebTable getTabelaFuncionario() {
@@ -178,6 +182,7 @@ public class PainelCadastroVenda extends PainelSistema {
 
     /**
      * Retorna um ComboBox para o cpf do cliente
+     *
      * @return um ComboBox para o cpf do cliente
      */
     @Override
@@ -187,6 +192,7 @@ public class PainelCadastroVenda extends PainelSistema {
 
     /**
      * Retorna um ComboBox para o cpf do funcionário
+     *
      * @return um ComboBox para o cpf do funcionário
      */
     @Override
@@ -196,6 +202,7 @@ public class PainelCadastroVenda extends PainelSistema {
 
     /**
      * Retorna um TextField para o nome da venda
+     *
      * @return um TextField para o nome da venda
      */
     @Override
@@ -205,6 +212,7 @@ public class PainelCadastroVenda extends PainelSistema {
 
     /**
      * Retorna um TextField para o valor da venda
+     *
      * @return um TextField para o valor da venda
      */
     @Override

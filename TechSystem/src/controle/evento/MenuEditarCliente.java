@@ -7,16 +7,17 @@ import visao.PainelMenuBar;
 
 /**
  * Acoes do painel de menu
+ *
  * @author Pedro Celestino Silveira Junior
  */
 public class MenuEditarCliente implements ActionListener {
-    
+
     private final PainelMenuBar painelMenuBar;
 
     public MenuEditarCliente(PainelMenuBar painelMenuBar) {
         this.painelMenuBar = painelMenuBar;
     }
-    
+
     @Override
     public void actionPerformed(ActionEvent e) {
         // Remove todos os componentes de todos os paineis

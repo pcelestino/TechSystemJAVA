@@ -13,6 +13,7 @@ import visao.edicao.PainelEdicaoVenda;
 
 /**
  * Acoes do painel para edição de venda
+ *
  * @author Pedro Celestino Silveira Junior
  */
 public class BtAtualizarVenda implements ActionListener {
@@ -23,13 +24,13 @@ public class BtAtualizarVenda implements ActionListener {
     private Validador valida;
     private SistemaDAO sistemaDAO;
     int linha;
-    
+
     @Override
     public void actionPerformed(ActionEvent e) {
         try {
             sistemaDAO = new SistemaDAO();
             painelEdicaoVenda = telaPrincipal.getPainelCards().getPainelEdicaoVenda();
-            
+
             // Instância o objeto Validador para validar os dados
             valida = new Validador();
 

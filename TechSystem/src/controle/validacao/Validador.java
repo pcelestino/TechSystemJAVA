@@ -15,6 +15,7 @@ import javax.swing.JOptionPane;
 
 /**
  * Valida diversos dados do programa
+ *
  * @author Pedro Celestino Silveira Junior
  */
 public class Validador {
@@ -24,8 +25,9 @@ public class Validador {
 
     /**
      * Valida o nome
+     *
      * @param nome o nome para ser analisado
-     * @throws NomeInvalidoException Exceção gerada quando o nome fornecido 
+     * @throws NomeInvalidoException Exceção gerada quando o nome fornecido
      * contém caracteres especiais ou é maior que 45 ou é menor que 3 caracteres
      */
     public void validarNome(String nome) throws NomeInvalidoException {
@@ -39,8 +41,9 @@ public class Validador {
 
     /**
      * Valida o nome da venda
+     *
      * @param nomeVenda o nome da venda que será analisado
-     * @throws NomeVendaInvalidoException Exceção gerada quando o nome fornecido 
+     * @throws NomeVendaInvalidoException Exceção gerada quando o nome fornecido
      * contém caracteres especiais ou é maior que 45 ou é menor que 3 caracteres
      */
     public void validarNomeVenda(String nomeVenda) throws NomeVendaInvalidoException {
@@ -54,9 +57,10 @@ public class Validador {
 
     /**
      * Valida a data de nascimento
+     *
      * @param dataNascimento a data de nascimento que será analisada
-     * @throws DataInvalidaException Exceção gerada quando a data 
-     * for inválida ou o usuário for menor de 18 anos
+     * @throws DataInvalidaException Exceção gerada quando a data for inválida
+     * ou o usuário for menor de 18 anos
      */
     public void validarDataNascimento(String dataNascimento) throws DataInvalidaException {
 
@@ -77,7 +81,7 @@ public class Validador {
             if (diferencaMes < 0 || (diferencaMes == 0 && diferencaDia < 0)) {
                 idade--;
             }
-            
+
             if (idade < 16 || idade > 120) {
                 throw new DataInvalidaException(dataNascimento, "\n[Idade mínima 18 e máxima 120 anos]");
             } else if (dia > 31 || mes > 12) {
@@ -89,8 +93,9 @@ public class Validador {
 
     /**
      * Valida o salário
+     *
      * @param salario o salário que será analisado
-     * @throws ValorInvalidoException Exceção gerada quando o valor do salário 
+     * @throws ValorInvalidoException Exceção gerada quando o valor do salário
      * for menor que R$ 500.00
      */
     public void validarSalario(double salario) throws ValorInvalidoException {
@@ -102,9 +107,10 @@ public class Validador {
 
     /**
      * Valida o valor da venda
+     *
      * @param valorVenda o valor da venda que será analisado
-     * @throws ValorInvalidoException Exceção gerada quando o valor da venda 
-     * for menor que R$ 0.01 
+     * @throws ValorInvalidoException Exceção gerada quando o valor da venda for
+     * menor que R$ 0.01
      */
     public void validarValorVenda(double valorVenda) throws ValorInvalidoException {
 
@@ -116,10 +122,11 @@ public class Validador {
 
     /**
      * Valida o cpf
+     *
      * @param CPF o cpf que será analisado
      * @param pessoa o tipo da pessoa que será analizada no DB
-     * @throws CpfInvalidoException Exceção gerada quando o cpf 
-     * for inválido ou já existir no DB
+     * @throws CpfInvalidoException Exceção gerada quando o cpf for inválido ou
+     * já existir no DB
      */
     public void validarCPF(String CPF, String pessoa) throws CpfInvalidoException {
 
@@ -150,11 +157,12 @@ public class Validador {
 
     /**
      * Valida o cpf
+     *
      * @param CPF o cpf que será analisado
      * @param cpfSelecionado o cpf selecionado na tabela
      * @param pessoa o tipo da pessoa que será analizada no DB
-     * @throws CpfInvalidoException Exceção gerada quando o cpf 
-     * for inválido ou já existir no DB
+     * @throws CpfInvalidoException Exceção gerada quando o cpf for inválido ou
+     * já existir no DB
      */
     public void validarCPF(String CPF, String cpfSelecionado, String pessoa) throws CpfInvalidoException {
 
@@ -188,9 +196,10 @@ public class Validador {
 
     /**
      * Valida a senha
+     *
      * @param senha a senha que será analisada
-     * @throws SenhaInvalidaException Exceção gerada quando 
-     * a senha for maior que 32 e menor que 4 caracteres
+     * @throws SenhaInvalidaException Exceção gerada quando a senha for maior
+     * que 32 e menor que 4 caracteres
      */
     public void validarSenha(char[] senha) throws SenhaInvalidaException {
 

@@ -7,16 +7,17 @@ import visao.PainelMenuBar;
 
 /**
  * Acoes do painel de menu
+ *
  * @author Pedro Celestino Silveira Junior
  */
 public class MenuEditarUsuario implements ActionListener {
-    
+
     private final PainelMenuBar painelMenuBar;
 
     public MenuEditarUsuario(PainelMenuBar painelMenuBar) {
         this.painelMenuBar = painelMenuBar;
     }
-    
+
     @Override
     public void actionPerformed(ActionEvent e) {
 

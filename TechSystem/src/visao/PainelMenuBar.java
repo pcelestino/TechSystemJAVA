@@ -27,7 +27,7 @@ import javax.swing.BorderFactory;
 public class PainelMenuBar extends PainelSistema {
 
     private static final long serialVersionUID = 1L;
-    
+
     private final BtDeslogar acaoBtDeslogar;
     private final MenuCadastrarCliente acaoMenuCadastrarCliente;
     private final MenuCadastrarFuncionario acaoMenuCadastrarFuncionario;
@@ -38,7 +38,7 @@ public class PainelMenuBar extends PainelSistema {
     private final MenuEditarUsuario acaoMenuEditarUsuario;
     private final MenuEditarVenda acaoMenuEditarVenda;
     private final MenuVisualizarCadastros acaoMenuVisualizarCadastros;
-    
+
     private final GridBagConstraints restricoes;
     private final WebButton btDeslogar;
     private final WebMenuBar menuBar;
@@ -50,7 +50,7 @@ public class PainelMenuBar extends PainelSistema {
      * Constrói um menu
      */
     public PainelMenuBar() {
-        
+
         // Action Listeners
         acaoBtDeslogar = new BtDeslogar();
         acaoMenuCadastrarCliente = new MenuCadastrarCliente(this);
@@ -62,7 +62,7 @@ public class PainelMenuBar extends PainelSistema {
         acaoMenuEditarUsuario = new MenuEditarUsuario(this);
         acaoMenuEditarVenda = new MenuEditarVenda(this);
         acaoMenuVisualizarCadastros = new MenuVisualizarCadastros(this);
-        
+
         menuBar = new WebMenuBar();
         menuBar.setLayout(new GridBagLayout());
         menuAcoes = new WebMenu("Ações");

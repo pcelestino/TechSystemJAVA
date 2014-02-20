@@ -8,23 +8,24 @@ import visao.edicao.PainelEdicaoCliente;
 
 /**
  * Acoes do painel para edição de cliente
+ *
  * @author Pedro Celestino Silveira Junior
  */
 public class MouseEditarCliente implements MouseListener {
-    
+
     private PainelEdicaoCliente painelEdicaoCliente;
     private ArrayList<Object> obj;
     private int linha;
-    
+
     @Override
     public void mouseClicked(MouseEvent e) {
     }
 
     @Override
     public void mousePressed(MouseEvent e) {
-        
+
         painelEdicaoCliente = telaPrincipal.getPainelCards().getPainelEdicaoCliente();
-        
+
         // Habilita os componentes
         painelEdicaoCliente.habilitaComponentes();
 

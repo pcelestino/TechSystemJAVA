@@ -15,6 +15,7 @@ import visao.cadastro.PainelCadastroUsuario;
 
 /**
  * Acoes do painel para cadastro de usuário
+ *
  * @author Pedro Celestino Silveira Junior
  */
 public class BtCadastrarUsuario implements ActionListener {
@@ -25,13 +26,13 @@ public class BtCadastrarUsuario implements ActionListener {
     private char[] senha;
     private SistemaDAO sistemaDAO;
     private PainelCadastroUsuario painelCadastroUsuario;
-    
+
     @Override
     public void actionPerformed(ActionEvent e) {
         try {
             sistemaDAO = new SistemaDAO();
             painelCadastroUsuario = telaPrincipal.getPainelCards().getPainelCadastroUsuario();
-          
+
             // Instancia o objeto Validador para validar os dados
             valida = new Validador();
 

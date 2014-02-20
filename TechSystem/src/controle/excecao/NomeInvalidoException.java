@@ -2,6 +2,7 @@ package controle.excecao;
 
 /**
  * Exceção para o nome inválido
+ *
  * @author Pedro Celestino Silveira Junior
  */
 public class NomeInvalidoException extends Exception {
@@ -10,6 +11,7 @@ public class NomeInvalidoException extends Exception {
 
     /**
      * Constrói a exceção
+     *
      * @param nome o nome inválido
      */
     public NomeInvalidoException(String nome) {

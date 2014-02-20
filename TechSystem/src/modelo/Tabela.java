@@ -6,6 +6,7 @@ import javax.swing.table.AbstractTableModel;
 
 /**
  * Modelo de uma tabela
+ *
  * @author Pedro Celestino Silveira Junior
  */
 public class Tabela extends AbstractTableModel {
@@ -16,6 +17,7 @@ public class Tabela extends AbstractTableModel {
 
     /**
      * Contrói uma tabela com seus parâmetros obrigatórios
+     *
      * @param dados um vetor de dados
      * @param col a quantidade de colunas da tabela
      */
@@ -26,14 +28,16 @@ public class Tabela extends AbstractTableModel {
 
     /**
      * Retorna a quantidade de linhas da tabela
+     *
      * @return a quantidade de linhas da tabela
      */
     public ArrayList<Object[]> getLinhas() {
         return this.linhas;
     }
-    
+
     /**
      * Seta o dados nas linhas de uma tabela
+     *
      * @param dados os dados que serão inseridos nas linhas da tabela
      */
     private void setLinhas(ArrayList<Object[]> dados) {
@@ -42,6 +46,7 @@ public class Tabela extends AbstractTableModel {
 
     /**
      * Retorna o número de colunas da tabela
+     *
      * @return o número de colunas da tabela
      */
     public String[] getColunas() {
@@ -50,12 +55,13 @@ public class Tabela extends AbstractTableModel {
 
     /**
      * Seta o nome das colunas da tabela
+     *
      * @param nomes os nomes das colunas da tabela
      */
     private void setColunas(String[] nomes) {
         this.colunas = nomes;
     }
-    
+
     @Override
     public int getColumnCount() {
         return this.colunas.length;

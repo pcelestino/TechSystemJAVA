@@ -15,6 +15,7 @@ import visao.cadastro.PainelCadastroFuncionario;
 
 /**
  * Acoes do painel para cadastro de funcionário
+ *
  * @author Pedro Celestino Silveira Junior
  */
 public class BtCadastrarFuncionario implements ActionListener {
@@ -30,7 +31,7 @@ public class BtCadastrarFuncionario implements ActionListener {
         try {
             sistemaDAO = new SistemaDAO();
             painelCadastroFuncionario = telaPrincipal.getPainelCards().getPainelCadastroFuncionario();
-        
+
             // Instancia o objeto Validador para validar os dados
             valida = new Validador();
 

@@ -9,6 +9,7 @@ import visao.edicao.PainelEdicaoVenda;
 
 /**
  * Acoes do painel para edição de venda
+ *
  * @author Pedro Celestino Silveira Junior
  */
 public class BtExcluirVenda implements ActionListener {
@@ -17,13 +18,13 @@ public class BtExcluirVenda implements ActionListener {
     private String idVenda;
     private SistemaDAO sistemaDAO;
     private PainelEdicaoVenda painelEdicaoVenda;
-    
+
     @Override
     public void actionPerformed(ActionEvent e) {
-        
+
         sistemaDAO = new SistemaDAO();
         painelEdicaoVenda = telaPrincipal.getPainelCards().getPainelEdicaoVenda();
-        
+
         int opcao = JOptionPane.showConfirmDialog(null, "Deseja Realmente Excluir?", "Atenção", JOptionPane.YES_NO_OPTION);
 
         if (opcao == JOptionPane.YES_OPTION) {

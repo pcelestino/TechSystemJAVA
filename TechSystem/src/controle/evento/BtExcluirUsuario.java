@@ -9,6 +9,7 @@ import visao.edicao.PainelEdicaoUsuario;
 
 /**
  * Acoes do painel para edição de usuário
+ *
  * @author Pedro Celestino Silveira Junior
  */
 public class BtExcluirUsuario implements ActionListener {
@@ -17,13 +18,13 @@ public class BtExcluirUsuario implements ActionListener {
     private String cpfSelecionado;
     private SistemaDAO sistemaDAO;
     private PainelEdicaoUsuario painelEdicaoUsuario;
-    
+
     @Override
     public void actionPerformed(ActionEvent e) {
-        
+
         sistemaDAO = new SistemaDAO();
         painelEdicaoUsuario = telaPrincipal.getPainelCards().getPainelEdicaoUsuario();
-        
+
         int opcao = JOptionPane.showConfirmDialog(null, "Deseja Realmente Excluir?", "Atenção", JOptionPane.YES_NO_OPTION);
 
         if (opcao == JOptionPane.YES_OPTION) {

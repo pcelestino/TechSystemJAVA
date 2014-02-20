@@ -8,6 +8,7 @@ import visao.edicao.PainelEdicaoVenda;
 
 /**
  * Acoes do painel para edição de venda
+ *
  * @author Pedro Celestino Silveira Junior
  */
 public class MouseEditarVenda implements MouseListener {
@@ -16,16 +17,16 @@ public class MouseEditarVenda implements MouseListener {
     private ArrayList<Object> obj;
     private int linha;
     private String cpfCliente, cpfFuncionario;
-    
+
     @Override
     public void mouseClicked(MouseEvent e) {
     }
 
     @Override
     public void mousePressed(MouseEvent e) {
-        
+
         painelEdicaoVenda = telaPrincipal.getPainelCards().getPainelEdicaoVenda();
-        
+
         // Habilita os componentes
         painelEdicaoVenda.habilitaComponentes();
 

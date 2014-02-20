@@ -2,6 +2,7 @@ package controle.excecao;
 
 /**
  * Exceção para o cpf inválido
+ *
  * @author Pedro Celestino Silveira Junior
  */
 public class CpfInvalidoException extends Exception {
@@ -10,6 +11,7 @@ public class CpfInvalidoException extends Exception {
 
     /**
      * Constrói a exceção
+     *
      * @param texto um texto para complementar a descrição da exceção
      */
     public CpfInvalidoException(String texto) {

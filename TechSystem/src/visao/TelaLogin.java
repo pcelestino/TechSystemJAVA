@@ -28,6 +28,7 @@ import javax.swing.text.MaskFormatter;
 
 /**
  * Tela para o login no DB e sistema
+ *
  * @author Pedro Celestino Silveira Junior
  */
 public final class TelaLogin extends WebFrame {
@@ -58,7 +59,7 @@ public final class TelaLogin extends WebFrame {
         controleLogin = new ControleLoginSistema(this);
         cardLogin = new CardLayout();
         pnLogin = new WebPanel(cardLogin);
-        
+
         this.setResizable(false);
         this.setTitle("Banco de Dados");
         this.setIconImages(WebLookAndFeel.getImages());
@@ -182,6 +183,7 @@ public final class TelaLogin extends WebFrame {
 
     /**
      * Retorna um TextField para o login do sistema
+     *
      * @return um TextField para o login do sistema
      */
     public WebFormattedTextField getFtfLoginSistema() {
@@ -190,6 +192,7 @@ public final class TelaLogin extends WebFrame {
 
     /**
      * Retorna um TextField para o login do banco
+     *
      * @return um TextField para o login do banco
      */
     public WebTextField getTfLoginBanco() {
@@ -198,6 +201,7 @@ public final class TelaLogin extends WebFrame {
 
     /**
      * Retorna um ComboBox para o tipo do banco
+     *
      * @return um ComboBox para o tipo do banco
      */
     public WebComboBox getCbTipoBanco() {
@@ -206,6 +210,7 @@ public final class TelaLogin extends WebFrame {
 
     /**
      * Retorna um PasswordField para a senha do sistema
+     *
      * @return um PasswordField para a senha do sistema
      */
     public WebPasswordField getPwSenhaSistema() {
@@ -214,6 +219,7 @@ public final class TelaLogin extends WebFrame {
 
     /**
      * Retorna um PasswordField para a senha do banco
+     *
      * @return um PasswordField para a senha do banco
      */
     public WebPasswordField getPwSenhaBanco() {
@@ -222,6 +228,7 @@ public final class TelaLogin extends WebFrame {
 
     /**
      * Retorna um Button para o login do sistema
+     *
      * @return um Button para o login do sistema
      */
     public WebButton getBtLogarSistema() {
@@ -230,6 +237,7 @@ public final class TelaLogin extends WebFrame {
 
     /**
      * Retorna um Button para o login do banco
+     *
      * @return um Button para o login do banco
      */
     public WebButton getBtLogarBanco() {
@@ -238,6 +246,7 @@ public final class TelaLogin extends WebFrame {
 
     /**
      * Retorna um Button para limpar os componentes do login de sistema
+     *
      * @return um Button para limpar os componentes do login de sistema
      */
     public WebButton getBtLimparSistema() {
@@ -246,6 +255,7 @@ public final class TelaLogin extends WebFrame {
 
     /**
      * Retorna um Button para limpar os componentes do login de banco
+     *
      * @return um Button para limpar os componentes do login de banco
      */
     public WebButton getBtLimparBanco() {
@@ -254,6 +264,7 @@ public final class TelaLogin extends WebFrame {
 
     /**
      * Retorna um Panel para o login do sistema
+     *
      * @return um Panel para o login do sistema
      */
     public WebPanel getPnLoginSistema() {
@@ -262,6 +273,7 @@ public final class TelaLogin extends WebFrame {
 
     /**
      * Retorna um Panel para o login do banco
+     *
      * @return um Panel para o login do banco
      */
     public WebPanel getPnLoginBanco() {
@@ -270,6 +282,7 @@ public final class TelaLogin extends WebFrame {
 
     /**
      * Retorna um Panel para o login
+     *
      * @return um Panel para o login
      */
     public WebPanel getPnLogin() {
@@ -278,6 +291,7 @@ public final class TelaLogin extends WebFrame {
 
     /**
      * Retorna um CardLayout do login
+     *
      * @return um CardLayout do login
      */
     public CardLayout getCardLogin() {

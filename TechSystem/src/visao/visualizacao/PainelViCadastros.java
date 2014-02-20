@@ -11,6 +11,7 @@ import visao.PainelSistema;
 
 /**
  * Painel para visualização dos cadastros
+ *
  * @author Pedro Celestino Silveira Junior
  */
 public class PainelViCadastros extends PainelSistema {
@@ -73,6 +74,7 @@ public class PainelViCadastros extends PainelSistema {
 
     /**
      * Retorna uma tabela de venda
+     *
      * @return uma tabela de venda
      */
     public WebTable getTabelaVenda() {
@@ -81,6 +83,7 @@ public class PainelViCadastros extends PainelSistema {
 
     /**
      * Retorna uma tabela de cliente
+     *
      * @return uma tabela de cliente
      */
     public WebTable getTabelaCliente() {
@@ -89,6 +92,7 @@ public class PainelViCadastros extends PainelSistema {
 
     /**
      * Retorna uma tabela de funcionário
+     *
      * @return uma tabela de funcionário
      */
     public WebTable getTabelaFuncionario() {
@@ -97,6 +101,7 @@ public class PainelViCadastros extends PainelSistema {
 
     /**
      * Retorna uma tabela de usuário
+     *
      * @return uma tabela de usuário
      */
     public WebTable getTabelaUsuario() {
