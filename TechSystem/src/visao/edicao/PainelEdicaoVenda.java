@@ -185,7 +185,25 @@ public class PainelEdicaoVenda extends PainelSistema {
     public WebTable getTabelaVenda() {
         return tabelaVenda;
     }
-
+    
+    /**
+     * Retorna uma tabela de cliente
+     *
+     * @return uma tabela de cliente
+     */
+    public WebTable getTabelaCliente() {
+        return tabelaCliente;
+    }
+    
+    /**
+     * Retorna uma tabela de funcionário
+     *
+     * @return uma tabela de funcionário
+     */
+    public WebTable getTabelaFuncionario() {
+        return tabelaFuncionario;
+    }
+    
     /**
      * Retorna um ComboBox para o cpf do cliente
      *
